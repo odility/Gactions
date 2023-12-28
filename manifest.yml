@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: wafi-app
+spec:
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: wafi-namespace
+  project: default
+  source:
+    repoURL: 'https://github.com/odility/Wafi-devops-interview
+    path: ./k8s-manifests
+    targetRevision: HEAD
