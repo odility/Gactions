@@ -5,9 +5,13 @@ metadata:
 spec:
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: wafi-namespace
+    namespace: my-wafi-namespace
   project: default
   source:
-    repoURL: 'https://github.com/odility/Wafi-devops-interview
+    repoURL: 'https://github.com/odility/Gactions
     path: ./k8s-manifests
     targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
